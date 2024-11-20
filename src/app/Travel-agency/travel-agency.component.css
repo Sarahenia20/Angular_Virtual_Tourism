@@ -1,0 +1,133 @@
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/tropical.jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.header-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header .title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.header .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.header .btn {
+    text-decoration: none;
+    color: white;
+    background: #ff5733;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.header .btn:hover {
+    background: #c13e21;
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Section Partners */
+.partners {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.partners h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+.partners-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.agency-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.agency-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.agency-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.agency-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.agency-card p {
+    font-size: 1rem;
+    color: #666;
+}

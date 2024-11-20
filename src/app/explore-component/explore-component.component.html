@@ -1,0 +1,21 @@
+<div class="home-container">
+    <app-navbar></app-navbar>
+
+    <app-map3d></app-map3d>
+    <div class="explore-container">
+      <div class="attractions-list">
+        <div *ngFor="let attraction of attractions" class="attraction-card">
+          <!-- Affiche la vidéo si elle est disponible -->
+          <video *ngIf="attraction.videoUrl" [src]="attraction.videoUrl" controls class="attraction-video"></video>
+    
+          <!-- Sinon, affiche l'image -->
+          <img *ngIf="!attraction.videoUrl" [src]="attraction.imageUrl" alt="{{ attraction.name }}" class="attraction-image" />
+    
+          <h2>{{ attraction.name }}</h2>
+          <p>{{ attraction.description }}</p>
+          <button class="explore-button">En savoir plus</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

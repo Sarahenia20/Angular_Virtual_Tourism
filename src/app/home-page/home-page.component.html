@@ -1,0 +1,21 @@
+<div class="home-container">
+  <app-navbar></app-navbar>
+  <div id="map3d-container"></div> <!-- 3D map in the center -->
+  <app-map3d></app-map3d>
+  
+  <div class="destinations-section">
+      <h2>Destinations</h2>
+      <div class="destination-cards">
+          <!-- Loop through destination data -->
+          <div class="card" *ngFor="let destination of destinations">
+              <img [src]="destination.image" alt="{{ destination.name }}" />
+              <div class="card-body">
+                  <h5>{{ destination.name }}</h5>
+                  <p>Date: {{ destination.date }}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Call the footer component -->
+</div>

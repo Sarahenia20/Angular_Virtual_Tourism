@@ -1,0 +1,70 @@
+/* home-page.component.css */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light background */
+  }
+  
+  /* map3d.component.css */
+  #map3d-container {
+    width: 100%;
+    height: 500px;
+    background-color: transparent; /* Set to transparent or white if needed */
+  }
+  
+  .title-3d {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 30px;
+    color: #490ea7;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 
+      1px 1px 0 #000000,
+      2px 2px 0 #4c4c4c,
+      3px 3px 0 #8c8c8c,
+      4px 4px 5px rgba(0, 0, 0, 0.5);
+    transform: rotateX(10deg) rotateY(10deg);
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: rotateX(10deg) rotateY(10deg) translateY(0);
+    }
+    50% {
+      transform: rotateX(15deg) rotateY(15deg) translateY(-10px);
+    }
+  }
+  
+  
+  
+  .destination-cards {
+    display: flex; /* Active la disposition en flexbox */
+    justify-content: center; /* Centre les cartes */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les cartes */
+  }
+  
+  .card {
+    width: 300px; /* Largeur des cartes */
+    background: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Couper les débordements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Effet d'ombre */
+    text-align: left;
+  }
+  
+  .card img {
+    width: 100%; /* Image qui couvre toute la largeur de la carte */
+    height: 200px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Ajuste l'image sans déformation */
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  

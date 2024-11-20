@@ -1,0 +1,178 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #002f4b, #dc4225); /* VR-themed colors */
+    padding-top: 50px;
+  }
+  
+  .profile-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #00bcd4; /* Blue border for the avatar */
+  }
+  
+  .profile-info h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #333;
+  }
+  
+  .profile-info p {
+    margin: 10px 0;
+    color: #777;
+  }
+  
+  button {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  .vr-tour-options {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+  }
+  
+  .vr-tour-options h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .vr-tour-options ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .vr-tour-options li {
+    font-size: 18px;
+  }
+  .vr-tour-options {
+    perspective: 1000px; /* Ajoute une perspective pour les transformations 3D */
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d; /* Permet de maintenir les enfants en 3D */
+    transition: transform 1s ease-in-out;
+    text-align: center;
+  }
+  
+  .vr-tour-options:hover {
+    transform: rotateY(15deg) rotateX(10deg); /* Effet 3D au survol */
+  }
+  
+  .vr-tour-options h3 {
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .vr-tour-options ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .vr-tour-options li {
+    font-size: 18px;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    margin: 5px 0;
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateZ(-200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  /* Animation du titre avec transformation 3D */
+.animate-text {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  perspective: 1000px;
+}
+
+.animate-text span {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  transform: rotateY(-90deg); /* Les lettres commencent en dehors de l'écran */
+  animation: rotateIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  animation-delay: calc(var(--i) * 0.1s); /* Délai basé sur l'index */
+  opacity: 0; /* Initialement invisible */
+}
+
+/* Ajout d'index pour chaque lettre */
+.animate-text span:nth-child(1) { --i: 1; }
+.animate-text span:nth-child(2) { --i: 2; }
+.animate-text span:nth-child(3) { --i: 3; }
+/* Continuez pour chaque lettre */
+
+/* Animation Keyframes */
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateZ(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateZ(0);
+  }
+}
+
+/* Animation pour la liste */
+.vr-tour-options ul li {
+  font-size: 18px;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  margin: 5px 0;
+  animation: slideIn 1.5s ease-out forwards;
+  animation-delay: calc(var(--i) * 0.2s); /* Délai échelonné */
+  opacity: 0; /* Initialement invisible */
+}
+
+.vr-tour-options ul li:nth-child(1) { --i: 1; }
+.vr-tour-options ul li:nth-child(2) { --i: 2; }

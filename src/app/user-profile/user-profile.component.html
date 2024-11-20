@@ -1,0 +1,28 @@
+
+<div class="profile-container">
+  <app-navbar></app-navbar>
+
+    <div class="profile-card">
+      <img [src]="getProfileImage()" alt="Profile Picture" class="profile-img">
+      <div class="profile-info">
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.email }}</p>
+      </div>
+      <button mat-raised-button color="primary" (click)="editProfile()">Edit Profile</button>
+    </div>
+  
+    <!-- Additional VR-related content -->
+    <div class="vr-tour-options">
+      <h3 class="animate-text">
+        <span>Y</span><span>o</span><span>u</span><span>r</span> 
+        <span>E</span><span>x</span><span>p</span><span>e</span><span>r</span><span>i</span><span>e</span><span>n</span><span>c</span><span>e</span><span>s</span>
+      </h3>
+      <ul>
+        <li>Recent: Tropical Island Adventure</li>
+        <li>Upcoming: City Skydiving Tour</li>
+      </ul>
+    </div>
+    
+    
+  </div>
+  
